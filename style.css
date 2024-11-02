@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+header{
+  max-width: 1200px;
+  background-color: rgb(69, 69, 241);
+  margin-inline: auto;
+  color: white;
+  padding: 5px 20px;
+  font-weight: 600;
+}
+
+main{
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+img{
+  width: 100%;
+}
+
+.content{
+  font-size: 20px;
+  width: 50%;
+  margin: 32px 48px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  color: gray;
+
+}
+
+#genarator{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputurl{
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+
+.selected{
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 8px;
+}
+
+.submit{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(69, 69, 241);
+  color: white;
+  font-size: 18px;
+}
+
+.download-btn{
+  display: block;
+  width: 20%;
+  text-align: center;
+  background-color: red;
+  color: white;
+  margin: 20px auto;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+
+
+.loading{
+  margin: 10px auto;
+  border: 16px solid gray;
+  border-radius: 50%;
+  border-top: 16px solid rgb(69, 69, 241);
+  height: 48px;
+  width: 48px;
+
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+#qrcode{
+  margin: auto;
+  max-width: 1200px;
+  width: max-content;
+  padding: 15px;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/*responsive*/
+@media screen and (max-width:600px) {
+  main {
+    flex-direction: column;
+  }
+}
