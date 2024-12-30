@@ -7,7 +7,9 @@ document.getElementById("generateBtn").addEventListener("click", function () {
   }
 
   const qrcodeContainer = document.getElementById("qrcode");
+  const downloadLink = document.getElementById("downloadLink");
   qrcodeContainer.innerHTML = ""; // Clear previous QR code
+  downloadLink.style.display = "none"; // Hide download link initially
 
   QRCode.toCanvas(qrcodeContainer, idNumber, {
     width: 200,
@@ -17,7 +19,21 @@ document.getElementById("generateBtn").addEventListener("click", function () {
       light: "#ffffff",
     },
   }, function (error) {
-    if (error) console.error(error);
+    if (error) {
+      console.error(error);
+      return;
+    }
+    
     console.log("QR Code generated!");
+
+    // Convert to an image for download
+    QRCode.toDataURL(idNumber, { width: 200 }, function (err, url) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      downloadLink.href = url;
+      downloadLink.style.display = "block";
+    });
   });
 });
