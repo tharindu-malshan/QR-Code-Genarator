@@ -1,62 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Genarator</title>
-  <link rel="icon" type="image/svg" href="icon.svg">
+  <title>QR Code Generator</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
-    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
 <body>
-  <header>
-    <h2>QR Code Genarator</h2>
-  </header>
-  <main>
-    <div class="image">
-      <img src="qr-image.gif" alt="">
-    </div>
-    <div class="content">
-
-      <h2>QR Code Genarator</h2>
-
-      <p>QR code allow smartphone users to access your website simply</p>
-
-      <p>Enter Your URL below to genarate QR code and Download it</p>
-
-      <form id="genarator">
-
-        <input type="url" name="" id="url" class="inputurl" placeholder="Enter Your URL">
-
-        <!--selection-->
-        <select name="size" id="size" class="selected">
-          <option value="100">100x100</option>
-          <option value="200" selected>200x200</option>
-          <option value="300">300x300</option>
-          <option value="400">400x400</option>
-          <option value="500">500x500</option>
-          <option value="600">600x600</option>
-          <option value="700">700x700</option>
-
-        </select>
-        <button type="submit" class="submit">Genarate QR Code</button>
-      </form>
-    </div>
-  </main>
-
-  <!--qr code genarate-->
-  <div class="genarator" id="genarator">
-    <!--spinner-->
-    <div class="loading" id="spining"></div>
-
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    <label for="idNumber">Enter ID Number:</label>
+    <input type="text" id="idNumber" placeholder="Enter ID here">
+    <button id="generateBtn">Generate QR Code</button>
     <div id="qrcode"></div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script src="script.js"></script>
 </body>
-
 </html>
