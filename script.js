@@ -1,8 +1,9 @@
 document.getElementById("generateBtn").addEventListener("click", function () {
   const idNumber = document.getElementById("idNumber").value;
 
-  if (!idNumber) {
-    alert("Please enter an ID number!");
+  // Validate input: Ensure it's a numeric value and 8 digits max
+  if (!/^\d{1,8}$/.test(idNumber)) {
+    alert("Please enter a numeric ID with up to 8 digits.");
     return;
   }
 
