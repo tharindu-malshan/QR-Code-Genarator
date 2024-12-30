@@ -1,117 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-body{
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  color: #333;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Chakra Petch", sans-serif;
 }
 
-header{
-  max-width: 1200px;
-  background-color: rgb(69, 69, 241);
-  margin-inline: auto;
-  color: white;
-  padding: 5px 20px;
-  font-weight: 600;
-}
-
-main{
-  max-width: 1200px;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
-  text-align: center;
-}
-
-img{
-  width: 100%;
-}
-
-.content{
-  font-size: 20px;
-  width: 50%;
-  margin: 32px 48px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  color: gray;
-
-}
-
-#genarator{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.inputurl{
-  padding: 10px;
-  border: 2px solid gray;
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.selected{
-  padding: 10px;
-  border: 2px solid gray;
-  border-radius: 8px;
+h1 {
+  margin-bottom: 20px;
 }
 
-.submit{
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgb(69, 69, 241);
-  color: white;
-  font-size: 18px;
-}
-
-.download-btn{
+label {
   display: block;
-  width: 20%;
-  text-align: center;
-  background-color: red;
-  color: white;
-  margin: 20px auto;
-  padding: 10px 50px;
-  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 1rem;
 }
 
-
-.loading{
-  margin: 10px auto;
-  border: 16px solid gray;
-  border-radius: 50%;
-  border-top: 16px solid rgb(69, 69, 241);
-  height: 48px;
-  width: 48px;
-
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-#qrcode{
-  margin: auto;
-  max-width: 1200px;
-  width: max-content;
-  padding: 15px;
+button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-@keyframes spin{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
+button:hover {
+  background: #0056b3;
 }
 
-
-/*responsive*/
-@media screen and (max-width:600px) {
-  main {
-    flex-direction: column;
-  }
+#qrcode {
+  margin-top: 20px;
 }
