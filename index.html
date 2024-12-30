@@ -9,8 +9,8 @@
 <body>
   <div class="container">
     <h1>QR Code Generator</h1>
-    <label for="idNumber">Enter ID Number:</label>
-    <input type="text" id="idNumber" placeholder="Enter ID here">
+    <label for="idNumber">Enter ID Number (8 digits):</label>
+    <input type="text" id="idNumber" maxlength="8" placeholder="Enter up to 8 digits">
     <button id="generateBtn">Generate QR Code</button>
     <div id="qrcode"></div>
     <a id="downloadLink" style="display: none;" download="qrcode.png">Download QR Code</a>
